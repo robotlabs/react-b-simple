@@ -56,7 +56,6 @@
     "react-tap-event-plugin": "^2.0.1",
     "style-loader": "^0.13.1",
     "svg-mesh-3d": "^1.1.0",
-    "three-orbit-controls": "^82.1.0",
     "webpack": "^2.4.1",
     "webpack-dev-middleware": "^1.10.1",
     "webpack-hot-middleware": "^2.18.0"
