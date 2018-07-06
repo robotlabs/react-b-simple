@@ -12,7 +12,7 @@ export default class Spiral extends Component {
           this.node = element;
         }}
         className={styles.test}>
-        <span>CIAO</span>
+        <span>xCIAOx</span>
       </div>
     );
   }

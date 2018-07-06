@@ -53,6 +53,7 @@ setup:
 
 # dev mode, with hot reload for react component
 devhot:
+	$(MAKE) ss &
 	$(MAKE) _prepare-build
 	$(MAKE) lint-js
 	# launch watch on pure css
@@ -66,8 +67,10 @@ devhot:
 
 	# grep command is just to reduce verbosity. more details in pack/server-devhot
 	node pack/server-devhot.js $(SERVER_PROXY)| grep -v \"\\[\\d*\\]\"
-
+ss:
+	cd ./../output && python -m SimpleHTTPServer
 dev:
+	$(MAKE) ss &
 	$(MAKE) _prepare-build
 	$(MAKE) lint-js
 	# launch watch on pure css

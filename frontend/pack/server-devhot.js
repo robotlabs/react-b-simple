@@ -35,4 +35,4 @@ app.listen(3000, function(err) {
 
 //** start app
 
-open('http://localhost:8000/');
+open('http://localhost:3000/');
