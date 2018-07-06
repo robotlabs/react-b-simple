@@ -53,7 +53,6 @@ setup:
 
 # dev mode, with hot reload for react component
 devhot:
-	$(MAKE) ss &
 	$(MAKE) _prepare-build
 	$(MAKE) lint-js
 	# launch watch on pure css
@@ -70,7 +69,6 @@ devhot:
 ss:
 	cd ./../output && python -m SimpleHTTPServer
 dev:
-	$(MAKE) ss &
 	$(MAKE) _prepare-build
 	$(MAKE) lint-js
 	# launch watch on pure css
