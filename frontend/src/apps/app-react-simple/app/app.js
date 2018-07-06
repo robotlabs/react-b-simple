@@ -15,10 +15,6 @@ class App extends Component {
       loaded: false
     };
   }
-  //** called by any url update
-  shouldComponentUpdate(nextProps) {
-    return true;
-  }
 
   componentDidMount() {
     this.initApp();
@@ -31,7 +27,6 @@ class App extends Component {
       }, () => {
         console.log(':: fail');
       });
-
   }
 
   onDataFetched(results) {
@@ -40,10 +35,10 @@ class App extends Component {
       if (!this.firstLoad) {
         this.onPageLoaded();
       }
+      this.setState({
+        loaded: true
+      });
     }
-    this.setState({
-      loaded: true
-    });
   }
   onDataFetchedFail(results) {
     console.log(':: Fail data fetched :', results);
